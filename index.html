@@ -6,8 +6,8 @@
 <meta name="color-scheme" content="light dark">
 <title>Build Your Copilot – Workshop Prompts</title>
 <style>
-:root { --ink:#091F2E; --muted:#4a5a66; --bg:#f5f6fa; --surface:#ffffff; --line:#dde1ea; --purple:#8661C5; --teal:#389A91; --blue:#0078D4; --promptbg:#f3effa; --tealbg:#eaf6f4; --on:#ffffff; }
-@media (prefers-color-scheme: dark) { :root { --ink:#e8edf2; --muted:#a9b6c2; --bg:#11161c; --surface:#1b222b; --line:#2e3946; --promptbg:#2a2338; --tealbg:#1c302e; } }
+:root { --ink:#091F2E; --muted:#4a5a66; --bg:#f5f6fa; --surface:#ffffff; --line:#dde1ea; --purple:#8661C5; --teal:#389A91; --blue:#0078D4; --promptbg:#f3effa; --tealbg:#eaf6f4; --bluebg:#e8f2fb; --on:#ffffff; }
+@media (prefers-color-scheme: dark) { :root { --ink:#e8edf2; --muted:#a9b6c2; --bg:#11161c; --surface:#1b222b; --line:#2e3946; --promptbg:#2a2338; --tealbg:#1c302e; --bluebg:#172a3d; } }
 * { box-sizing:border-box; }
 body { margin:0; font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.5; }
 .wrap { max-inline-size:860px; margin-inline:auto; padding:1rem; }
@@ -26,6 +26,7 @@ body { margin:0; font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,san
 .section-sub { margin:0; color:var(--muted); }
 .card { border-block-start:5px solid var(--purple); }
 .card.teal { border-block-start-color:var(--teal); }
+.card.blue { border-block-start-color:var(--blue); } .blue .badge, .blue .copy { background:var(--blue); } .blue .label { color:var(--blue); } .blue .prompt { background:var(--bluebg); border-color:var(--blue); } .blue .copy.ok { background:var(--purple); }
 .card-head { display:flex; gap:.6rem; align-items:center; flex-wrap:wrap; }
 .badge { background:var(--purple); color:var(--on); font-weight:700; border-radius:6px; padding:.1rem .55rem; font-size:.85rem; }
 .teal .badge { background:var(--teal); }
@@ -70,7 +71,7 @@ footer { text-align:center; color:var(--muted); font-size:.85rem; margin-block:2
 <div><h1>Build Your Copilot: From Personal Productivity to Your Own Agent</h1>
 <p>Hands-on workshop prompts · Georgia Cross, Microsoft Technical Trainer · 29 October 2026</p></div></div>
 
-<nav class="nav" aria-label="Jump to prompt"><span>Jump to prompt:</span><a href="#p0">0</a><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p7">7</a><a href="#p8">8</a></nav>
+<nav class="nav" aria-label="Jump to prompt"><span>Jump to prompt:</span><a href="#p0">0</a><a href="#p1">1</a><a href="#p2">2</a><a href="#p3">3</a><a href="#p4">4</a><a href="#p5">5</a><a href="#p7">7</a><a href="#p8">8</a><a href="#p9">9</a></nav>
 
 <section class="intro important">
 <div class="label">How the discovery works</div>
@@ -90,19 +91,17 @@ footer { text-align:center; color:var(--muted); font-size:.85rem; margin-block:2
 <label class="done"><input type="checkbox" data-step="p0"> Done</label></header>
 <h2>Set some context</h2>
 <p class="purpose"><span class="label">Purpose</span> Let&#x27;s give Copilot our expectations for how we want to work together.</p>
-<div class="prompt-wrap"><div class="prompt" id="p0-t">For this conversation, I&#x27;m taking part in an interactive workshop and I want to work with you, rather than have you do everything for me.
-
+<div class="prompt-wrap"><div class="prompt" id="p0-t">For this conversation, I’m taking part in an interactive workshop and I want to work with you, rather than have you do everything for me.
 Please keep your responses short, concise and conversational. Give me just enough information to take the next step, rather than a complete or exhaustive answer.
-
 Throughout this conversation:
-- Keep responses brief and easy to scan.
-- Prioritise practical next steps over lengthy explanations.
-- Don&#x27;t give me everything at once.
-- Break complex tasks into small steps and work through them with me.
-- When useful, ask me one question at a time to understand my needs or refine the result.
-- If I give you feedback or change direction, adapt rather than restarting from scratch.
-- If I want more detail, I&#x27;ll ask for it.
-- Treat this as a collaborative working session. Help me think, not just give me answers.</div>
+Keep responses brief and easy to scan.
+Prioritise practical next steps over lengthy explanations.
+Don’t give me everything at once.
+Break complex tasks into small steps and work through them with me.
+When useful, ask me one question at a time to understand my needs or refine the result.
+If I give you feedback or change direction, adapt rather than restarting from scratch.
+If I want more detail, I’ll ask for it.
+Treat this as a collaborative working session. Help me think, not just give me answers.</div>
 <button type="button" class="copy" data-target="p0-t">Copy prompt</button></div>
 <div class="steps"><div class="label">Workshop steps</div><ol><li>Open a new Microsoft 365 Copilot chat</li><li>Paste the prompt into Copilot</li></ol></div>
 </article><article class="card purple" id="p1">
@@ -110,7 +109,7 @@ Throughout this conversation:
 <label class="done"><input type="checkbox" data-step="p1"> Done</label></header>
 <h2>Help Copilot understand my role</h2>
 <p class="purpose"><span class="label">Purpose</span> Give Copilot enough context to start, without writing a perfect role description.</p>
-<div class="prompt-wrap"><div class="prompt" id="p1-t">I want to understand how Copilot could help me work more effectively. Start by helping me describe my role and the work I do by analysing my emails, Teams chats, meetings and other data across my tenancy. Once you&#x27;ve looked at that and come up with a starting assumption, ask me one question at a time about my responsibilities, the people I support, the outcomes I am responsible for and the types of work I regularly complete. Make sure the questions are related to assumptions you&#x27;ve made so you can refine the view. Once you have enough information, summarise my role and ask me to correct anything you have misunderstood.</div>
+<div class="prompt-wrap"><div class="prompt" id="p1-t">I want to understand how Copilot could help me work more effectively. Start by helping me describe my role and the work I do by analysing my emails, teams chats, meetings and other data across my tenancy. Once you’ve looked at that and come up with a starting assumption ask me one question at a time about my responsibilities, the people I support, the outcomes I am responsible for and the types of work I regularly complete. Make sure the questions are related to assumptions you’ve made so you can refine the view. Once you have enough information, summarise my role and ask me to correct anything you have misunderstood.</div>
 <button type="button" class="copy" data-target="p1-t">Copy prompt</button></div>
 <div class="steps"><div class="label">Workshop steps</div><ol><li>Paste the prompt into Copilot</li><li>Answer the questions</li><li>Review the final summary</li><li>Correct anything missing or inaccurate</li></ol></div>
 <p class="tip"><strong>Tip:</strong> Don&#x27;t worry about a polished job description — you want a practical picture of what you actually do.</p></article><article class="card purple" id="p2">
@@ -190,6 +189,34 @@ Throughout this conversation:
 <button type="button" class="copy" data-target="p8-t">Copy prompt</button></div>
 <div class="steps"><div class="label">Workshop steps</div><ol><li>Run the prompt</li><li>Read Copilot&#x27;s critique and recommendation</li></ol></div>
 <p class="tip"><strong>Tip:</strong> The goal isn&#x27;t to force every idea into an agent — it&#x27;s a thoughtful decision. If a reusable prompt suits better, great call. You can still follow the Agent Builder demo with a practice scenario.</p></article>
+
+<h2 class="section-title">Part 3 · Design your agent</h2>
+<p class="section-sub">Capture everything you've discovered and decided in one design document.</p>
+<article class="card blue" id="p9">
+<header class="card-head"><span class="badge">Prompt 9</span><span class="stage">Design your agent</span>
+<label class="done"><input type="checkbox" data-step="p9"> Done</label></header>
+<h2>Create my agent design document</h2>
+<p class="purpose"><span class="label">Purpose</span> Turn your discovery and decisions into a practical design you can build from.</p>
+<div class="prompt-wrap"><div class="prompt" id="p9-t">Based on everything we have discovered and decided in this conversation, help me create a practical design document for my agent.
+Use the information already captured, but do not fill gaps with assumptions. If an important design decision is still unclear, ask me one question at a time before completing the document.
+Structure the design document with:
+1. Agent name
+2. Purpose and problem it solves
+3. Intended users
+4. Tasks the agent should help with
+5. What is in scope and out of scope
+6. Instructions for how the agent should behave
+7. Knowledge or information sources it should use
+8. Expected response style and format
+9. Three useful conversation starters
+10. Example user requests
+11. How we will test whether the agent works well
+Keep the document concise and practical. Clearly label anything that still needs to be confirmed.
+At the end, provide:
+• a complete agent design document in word format</div>
+<button type="button" class="copy" data-target="p9-t">Copy prompt</button></div>
+<div class="steps"><div class="label">Workshop steps</div><ol><li>Run the prompt in the same chat</li><li>Answer Copilot&#x27;s questions one at a time</li><li>Check anything labelled as still to be confirmed</li><li>Open and save the Word design document</li></ol></div>
+<p class="tip"><strong>Tip:</strong> Your design document becomes the blueprint for building your agent in Agent Builder.</p></article>
 
 <footer>Build Your Copilot workshop · OC&amp;D hands-on discovery and Agent Builder workshop</footer>
 </div>
